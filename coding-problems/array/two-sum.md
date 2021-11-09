@@ -34,6 +34,6 @@ You can return the answer in any order.
 <br>
 
 ### **Extra**:
-There is a solution that is less than <code>O($n^2$)</code>
+There is a solution that is less than <code>O($n^2$)</code>, can you find it?
 
 ## **Solutions**
