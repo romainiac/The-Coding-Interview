@@ -1,6 +1,6 @@
 # Two Sum
 
-[leet code link](https://leetcode.com/problems/two-sum/)
+[LeetCode link](https://leetcode.com/problems/two-sum/)
 
 ## **Problem**
 
@@ -87,9 +87,9 @@ for (let i = 0; i < nums.length; i++) {
 
 #### Complexity Analysis
 
-Time complexity: O(n^2). For each element, we try to find its complement by looping through the rest of the array which takes O(n) time. Therefore, the time complexity is O(n^2).
+*Time complexity: O(n^2). For each element, we try to find its complement by looping through the rest of the array which takes O(n) time. Therefore, the time complexity is O(n^2).*
 
-Space complexity: O(1). The space required does not depend on the size of the input array, so only constant space is used.
+*Space complexity: O(1). The space required does not depend on the size of the input array, so only constant space is used.*
 
 ### 2 Pass Hash Table
 
@@ -115,9 +115,9 @@ public int[] twoSum(int[] nums, int target) {
 
 #### Complexity Analysis
 
-Time complexity: O(n). We traverse the list containing nn elements exactly twice. Since the hash table reduces the lookup time to O(1), the overall time complexity is O(n).
+*Time complexity: O(n). We traverse the list containing nn elements exactly twice. Since the hash table reduces the lookup time to O(1), the overall time complexity is O(n).*
 
-Space complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores exactly n elements.
+*Space complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores exactly n elements.*
 
 
 ### 1 Pass Hash Table
@@ -140,11 +140,13 @@ public int[] twoSum(int[] nums, int target) {
 
 #### Complexiy Analysis
 
-Time complexity: O(n). We traverse the list containing nn elements only once. Each lookup in the table costs only O(1) time.
+*Time complexity: O(n). We traverse the list containing nn elements only once. Each lookup in the table costs only O(1) time.*
 
-Space complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores at most n elements.
+*Space complexity: O(n). The extra space required depends on the number of items stored in the hash table, which stores at most n elements.*
 
 
 # Notes
 
 I was confused at first because I did not realize it is ok if a value is overwritten in a hash table. For instance, the example `[3, 5, 3] , 6`. At first thought, putting the second 3 into a hash map will overwrite the first, and you won't have two *unique* 3's to add to 6. The thing I missed was that there would be a second pass of the original array, and not the map. Passsing through the array the second time, it will not matter which 3 is actually mapped. The only thing that matters is that a 3 exists in the map. 
+
+We know we can not achieve better than `O(n)` because we have reached the BCR. Every element needs to be touched at least once.
